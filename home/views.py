@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect,HttpResponseRedirect
+from django.shortcuts import render, redirect,HttpResponseRedirect, HttpResponse
 
 # Create your views here.
 
@@ -12,8 +12,9 @@ def logout_view(request):
 
 
 def home(request):
-    context = {'blogs': BlogModel.objects.all()}
-    return render(request, 'home.html', context)
+    # context = {'blogs': BlogModel.objects.all()}
+    # return render(request, 'home.html', context)
+    return HttpResponse("Hello")
 
 
 def login_view(request):

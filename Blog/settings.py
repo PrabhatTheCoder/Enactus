@@ -18,17 +18,14 @@ from decouple import config
 from whitenoise.base import WhiteNoise
 # from whitenoise.django import DjangoWhiteNoise
 # from whitenoise.middleware import WhiteNoiseMiddleware
-print(get_random_secret_key())
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
-# Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get("SECRET_KEY")
-# SECRET_KEY = "get_random_secret_key()"
+# SECRET_KEY = os.environ.get("SECRET_KEY")
+SECRET_KEY = get_random_secret_key()
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -97,8 +94,8 @@ DATABASES = {
 }
 
 # database_url = os.environ.get("DATABASE_URL")
-# database_url = "postgres://enactus_django_render_user:4BhUesLtquPQw9cve0MTSmRTRPbCBLlH@dpg-cnkboficn0vc73fdee0g-a/enactus_django_render"
-# DATABASES['default'] = dj_database_url.parse(database_url)
+database_url = "postgres://enactus_user:Rl3oNX6vKXjTTfC1raIsXFcYeTJGsKlH@dpg-cnlk510cmk4c73f185cg-a.oregon-postgres.render.com/enactus"
+DATABASES['default'] = dj_database_url.parse(database_url)
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators

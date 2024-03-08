@@ -36,6 +36,7 @@ DEBUG = os.environ.get("DEBUG", "false").lower() == "true"
 
 # ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS").split(" ")
 ALLOWED_HOSTS = ["*"]
+COMPRESS_ENABLED = os.environ.get('COMPRESS_ENABLED', False)
 
 
 # Application definition

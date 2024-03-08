@@ -13,8 +13,8 @@ def logout_view(request):
 
 def home(request):
     # context = {'blogs': BlogModel.objects.all()}
-    # return render(request, 'home.html', context)
-    return HttpResponse("Hello")
+    return render(request, 'home.html')
+    # return HttpResponse("Hello")
 
 
 def login_view(request):

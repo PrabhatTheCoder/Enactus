@@ -96,10 +96,6 @@ DATABASES = {
     }
 }
 
-DATABASES = {
-	"default": dj_database_url.parse(os.environ.get("DATABASE_URL"))
-}
-
 database_url = os.environ.get("DATABASE_URL")
 # database_url = "postgres://enactus_django_render_user:4BhUesLtquPQw9cve0MTSmRTRPbCBLlH@dpg-cnkboficn0vc73fdee0g-a/enactus_django_render"
 DATABASES['default'] = dj_database_url.parse(database_url)
